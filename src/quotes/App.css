@@ -34,5 +34,105 @@ button {
 }
 
 .win98 .window {
+  margin:2px auto;
+}
+
+
+.eyes-container {
+  margin:2px;
+}
+
+.eyes-container img {
+  display: block;
   margin:0 auto;
+
+}
+
+.angry-eyes {
+  /*background-color:red;*/
+    animation:color-cycle 375ms;
+    animation-iteration-count: 16
+
+}
+
+
+.angry-eyes img {
+    animation:eyes-size 3s;
+    animation-iteration-count: 2
+
+}
+
+@keyframes color-cycle {
+  0%, 96.875%, 100% {
+    background-color:#f00;
+  }
+  3.125%, 93.75% {
+    background-color:#f11;
+  }
+  6.25%, 90.625% {
+    background-color:#f22;
+  }
+  9.375%, 87.5% {
+    background-color:#f33;
+  }
+  12.5%, 84.375% {
+    background-color:#f44;
+  }
+  15.625%, 81.25% {
+    background-color:#f55;
+  }
+  18.75%, 78.125% {
+    background-color:#f66;
+  }
+  21.875%, 75% {
+    background-color:#f77;
+  }
+  25%, 71.875% {
+    background-color:#f88;
+  }
+  28.125%, 68.675% {
+    background-color:#f99;
+  }
+  31.25%, 65.625% {
+    background-color:#faa;
+  }
+  34.375%, 62.5% {
+    background-color:#fbb;
+  }
+  37.5%, 59.375% {
+    background-color:#fcc;
+  }
+  40.625%, 56.25% {
+    background-color:#fdd;
+  }
+  43.75%, 53.125% {
+    background-color:#fee;
+  }
+   46.875%, 50% {
+    background-color:#fff;
+  }
+ 
+
+
+
+
+
+  /*0%, 100% {
+    background-color:#f00;
+  }
+
+  50% {    
+    background-color:#fff;
+  }
+  */
+}
+
+@keyframes eyes-size {
+  0%, 100% {
+    width:485px;
+  }
+
+  50% {    
+    width:790px;
+  }
 }

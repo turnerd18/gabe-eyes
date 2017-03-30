@@ -26,6 +26,8 @@ class QuoteSubmission extends Component {
 
                         <div className="buttons" style={{"text-align":"right"}}>
                             <button onClick={() => this.props.onSubmitQuote(this.props.text)}>Submit</button>
+                            &nbsp;
+                            <button onClick={() => this.props.onCancelQuote()}>Cancel</button>
                         </div>
 
                 </div>
@@ -42,6 +44,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
+        onCancelQuote: () => dispatch(changeQuote("")),
         onChangeText: quoteText => dispatch(changeQuote(quoteText)),
         onSubmitQuote: quoteText => {
             if (!quoteText) return;

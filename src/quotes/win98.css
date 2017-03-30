@@ -46,8 +46,10 @@
   font-weight: bold;
   line-height: 12px;
   padding: 0;
+  margin-top:2px;
   height: 14px;
   width: 14px;
+  font-size:11px;
 }
 .win98 .menu {
   background: #bfbfbf;

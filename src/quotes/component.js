@@ -6,7 +6,7 @@ import './App.css';
 import './win98.css';
 import QuoteSubmission from "../quoteSubmission/component";
 import QuoteItem from "../quoteItem/component";
-import { loadQuotes, upVote, downVote } from "./actions"
+import { loadQuotes, upVote, downVote, closeEyes, doneClosingEyes } from "./actions"
 
 class App extends Component {
   componentWillMount() {
@@ -17,8 +17,15 @@ class App extends Component {
     return (
       <div className="win98">
         <div className="window">
-          <div className="header">eyes.exe</div>
-          <p><img src={headerGraphic} alt="I see your soul." width="100%" /></p>
+          <div className="header">
+            eyes.exe
+            <div className="buttons">
+              {!this.props.angryEyes && <button onClick={() => this.props.closeEyes()}>X</button>}
+            </div>
+          </div>
+          <div id="eyesContainer" className={`eyes-container ${this.props.angryEyes}`}>
+            <img id="eyesImage" src={headerGraphic} alt="I see your soul." />
+          </div>
         </div>
         <br />
         <QuoteSubmission />
@@ -47,12 +54,17 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    quotes: state.quotes
+    quotes: state.quotes.quotes,
+    angryEyes: state.quotes.angryEyes
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
+    closeEyes: () => {
+      dispatch(closeEyes());
+      setTimeout(() => dispatch(doneClosingEyes()), 6000);
+    },
     loadQuotes: () => dispatch(loadQuotes()),
     onUpVote: index => dispatch(upVote(index)),
     onDownVote: index => dispatch(downVote(index))
