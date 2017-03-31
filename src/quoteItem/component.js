@@ -23,7 +23,7 @@ class QuoteItem extends Component {
                     &#x1F44E;&#xFE0E;
                     <span>{downVotes}</span>
                 </button>
-                &nbsp;<span>{text}</span>
+                &nbsp;<span>"{text}"</span>
 
             </div>
         );
