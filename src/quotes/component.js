@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import headerGraphic from './eyes.jpg';
-import './App.css';
+import './quotes.css';
 import './win98.css';
 import QuoteSubmission from "../quoteSubmission/component";
 import QuoteItem from "../quoteItem/component";

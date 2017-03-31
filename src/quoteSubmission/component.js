@@ -16,12 +16,13 @@ class QuoteSubmission extends Component {
                     Enter a Quote
                 </div>
                 <div className="content">
-                    Quote Text:
+                    Out of the mouth of Gabe
                         <p>
                             <input type="text"
                                 style={{width:"100%"}}
                                 value={this.props.text}
-                                onChange={event => this.props.onChangeText(event.target.value)} />
+                                onChange={event => this.props.onChangeText(event.target.value)} 
+                                placeholder="Insert prophetic wisdom here." />
                         </p>
 
                         <div className="buttons" style={{"text-align":"right"}}>

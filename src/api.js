@@ -1,10 +1,14 @@
+const apiRoot = process.env.NODE_ENV === 'development'
+  ? 'http://localhost:54850/api'
+  : '/api';
+
 export const getQuotes = () => {
-  return fetch('http://localhost:53064/api/quote')
+  return fetch(`${apiRoot}/quote`)
     .then(response => response.json());
 };
 
-export const postQuote = (quote) => {
-  return fetch('http://localhost:53064/api/quote',
+export const postQuote = quote => {
+  return fetch(`${apiRoot}/quote`,
     {
       headers: {
         'Accept': 'application/json',
@@ -17,11 +21,11 @@ export const postQuote = (quote) => {
 };
 
 export const upVote = id => {
-  return fetch(`http://localhost:53064/api/quote/upvote/${id}`)
+  return fetch(`${apiRoot}/quote/upvote/${id}`)
     .then(response => response.json());
 };
 
 export const downVote = id => {
-  return fetch(`http://localhost:53064/api/quote/downvote/${id}`)
+  return fetch(`${apiRoot}/quote/downvote/${id}`)
     .then(response => response.json());
 };

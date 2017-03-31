@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 const Eyes = () => {
     return (
@@ -10,6 +11,7 @@ const Eyes = () => {
             <img src="img/construction2.gif" />
 
             <br /><br /><br /><br />
+            <Link to="/quotes">Click here to add quotes!</Link>
 
             <table border="10" cellpadding="10" cellspacing="0">
                 <tr>

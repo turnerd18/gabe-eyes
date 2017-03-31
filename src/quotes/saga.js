@@ -3,8 +3,7 @@ import { call, put, takeLatest, takeEvery } from 'redux-saga/effects'
 import * as api from '../api';
 import { 
     ADD_QUOTE, LOAD_QUOTES, UP_VOTE, DOWN_VOTE,
-    loadQuotes as loadQuotesAction, loadedQuotes,
-    upVote as upVoteAction, downVote as downVoteAction
+    loadQuotes as loadQuotesAction, loadedQuotes
 } from './actions';
 
 function* upVote({id}) {
